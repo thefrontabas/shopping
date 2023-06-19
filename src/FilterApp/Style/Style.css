@@ -1,0 +1,685 @@
+body {
+  background-color: #efece7;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: impact;
+  src: url("./impact.ttf");
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.9058823529);
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(136, 136, 136, 0.937254902);
+}
+
+.App {
+  margin: 0px 0;
+  width: 95%;
+  height: auto;
+}
+.App .mainmenu {
+  background-color: #0c0c0c;
+  padding: 10px;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+.App .mainmenu .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+.App .mainmenu .head .box1 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.App .mainmenu .head .box1 .user,
+.App .mainmenu .head .box1 .bagicon {
+  font-size: 25px;
+  padding: 0px 5px;
+  color: #fff;
+}
+.App .mainmenu .head .box1 .user img {
+  width: 45px;
+}
+.App .mainmenu .head .box1 .bagicon span {
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #fd9468;
+  padding: 3px 8px;
+  color: #000000;
+  text-align: center;
+  font-family: impact;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2156862745));
+  position: absolute;
+  top: 15px;
+  font-size: 13px;
+}
+.App .mainmenu .head .icon {
+  font-size: 30px;
+  color: #fff;
+}
+.App .mainmenu .linkbox {
+  width: 90%;
+}
+.App .mainmenu .linkbox ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+}
+.App .mainmenu .linkbox ul li {
+  padding-top: 20px;
+  font-family: impact;
+  font-size: 15px;
+}
+.App .mainmenu .linkbox ul li a {
+  color: rgba(211, 211, 211, 0.9843137255);
+  text-decoration: none;
+}
+.App .mainmenu .searchbox {
+  margin-top: 25px;
+  width: 100%;
+}
+.App .mainmenu .searchbox .inputbox {
+  width: 90%;
+  height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(128, 128, 128, 0.1568627451);
+  padding: 5px 10px;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.4235294118));
+}
+.App .mainmenu .searchbox .inputbox .icon {
+  flex: 0.5;
+  color: rgba(211, 211, 211, 0.9843137255);
+}
+.App .mainmenu .searchbox .inputbox .input {
+  flex: 4;
+  width: 100%;
+}
+.App .mainmenu .searchbox .inputbox .input input {
+  background-color: inherit;
+  border: 0;
+  outline: none;
+  width: 100%;
+  font-family: impact;
+  color: rgba(211, 211, 211, 0.9843137255);
+  font-size: 15px;
+}
+.App .mainmenu .searchbox .inputbox .input ::-moz-placeholder {
+  font-family: impact;
+  font-size: 13px;
+  color: rgba(211, 211, 211, 0.9843137255);
+}
+.App .mainmenu .searchbox .inputbox .input ::placeholder {
+  font-family: impact;
+  font-size: 13px;
+  color: rgba(211, 211, 211, 0.9843137255);
+}
+.App .menuhead {
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 10px;
+  background-color: #131313;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+.App .menuhead .logo img {
+  width: 70px;
+}
+.App .menuhead .icon {
+  font-size: 28px;
+  color: #f1f1f1;
+  display: inline-flex;
+}
+.App .menuhead .icon ion-icon {
+  padding-left: 10px;
+}
+.App .menubox {
+  width: 95%;
+  height: 50px;
+  margin: 0px auto;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3137254902);
+  display: flex;
+  padding-bottom: 15px;
+  align-items: center;
+  justify-content: space-around;
+}
+.App .menubox .logo {
+  flex: 1;
+}
+.App .menubox .logo img {
+  width: 65px;
+}
+.App .menubox .linkbox {
+  flex: 3;
+  border-left: 1px solid rgba(128, 128, 128, 0.3137254902);
+}
+.App .menubox .linkbox ul {
+  list-style: none;
+  display: inline-flex;
+}
+.App .menubox .linkbox ul li {
+  padding-right: 35px;
+  font-family: impact;
+  font-size: 15px;
+}
+.App .menubox .linkbox ul li a {
+  color: rgba(0, 0, 0, 0.7098039216);
+  text-decoration: none;
+}
+.App .menubox .searchbox {
+  flex: 3;
+}
+.App .menubox .searchbox .inputbox {
+  width: 38%;
+  height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(128, 128, 128, 0.1568627451);
+  padding: 5px 10px;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.4235294118));
+}
+.App .menubox .searchbox .inputbox .icon {
+  flex: 0.5;
+}
+.App .menubox .searchbox .inputbox .input {
+  flex: 4;
+  width: 100%;
+}
+.App .menubox .searchbox .inputbox .input input {
+  background-color: inherit;
+  border: 0;
+  outline: none;
+  width: 100%;
+  font-family: impact;
+  font-size: 15px;
+}
+.App .menubox .searchbox .inputbox .input ::-moz-placeholder {
+  font-family: impact;
+  font-size: 13px;
+  color: #000;
+}
+.App .menubox .searchbox .inputbox .input ::placeholder {
+  font-family: impact;
+  font-size: 13px;
+  color: #000;
+}
+.App .menubox .lastbox {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+}
+.App .menubox .lastbox .user,
+.App .menubox .lastbox .bagicon {
+  font-size: 25px;
+  padding: 0px 5px;
+}
+.App .menubox .lastbox .user img {
+  width: 50px;
+}
+.App .menubox .lastbox .bagicon span {
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #fd9468;
+  padding: 3px 8px;
+  color: #000000;
+  text-align: center;
+  font-family: impact;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2156862745));
+  position: absolute;
+  top: 15px;
+  font-size: 13px;
+}
+.App .flexbox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+}
+.App .flexbox .filterbox {
+  flex: 1;
+  height: 100%;
+  text-align: center;
+}
+.App .flexbox .filterbox .filterbox2 {
+  margin: 25px auto;
+  width: 50%;
+  height: auto;
+}
+.App .flexbox .filterbox .filterbox2 .linkbox {
+  width: 100%;
+  height: 270px;
+}
+.App .flexbox .filterbox .filterbox2 .linkbox .head {
+  font-family: impact;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.8352941176);
+}
+.App .flexbox .filterbox .filterbox2 .linkbox .ulbox {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+.App .flexbox .filterbox .filterbox2 .linkbox .ulbox .link:hover {
+  transition: all ease 0.5s;
+  transform: scale(1.1);
+}
+.App .flexbox .filterbox .filterbox2 .linkbox .ulbox .link {
+  font-family: impact;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8352941176);
+  padding-top: 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.7568627451);
+  padding: 7px 5px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.App .flexbox .filterbox .filterbox2 .linkbox .ulbox .link a {
+  color: rgba(0, 0, 0, 0.7098039216);
+  text-decoration: none;
+}
+.App .flexbox .filterbox .filterbox2 .colorbox {
+  width: 100%;
+  height: 200px;
+}
+.App .flexbox .filterbox .filterbox2 .colorbox .head {
+  font-family: impact;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.8352941176);
+}
+.App .flexbox .filterbox .filterbox2 .colorbox .colorcard {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+.App .flexbox .filterbox .filterbox2 .colorbox .colorcard .color {
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  background-color: #fd9468;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1450980392));
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.App .flexbox .filterbox .filterbox2 .colorbox .colorcard .color:hover {
+  transition: all ease 0.5s;
+  transform: scale(1.1);
+}
+.App .flexbox .filterbox .filterbox2 .rangebox {
+  width: 100%;
+  height: auto;
+  font-family: impact;
+}
+.App .flexbox .filterbox .filterbox2 .rangebox .head {
+  font-family: impact;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.8352941176);
+  padding-bottom: 30px;
+}
+.App .flexbox .filterbox .filterbox2 .rangebox .range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #404040; /* Grey background */
+  outline: none; /* Remove outline */ /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+.App .flexbox .filterbox .filterbox2 .rangebox .range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #282828;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.App .flexbox .filterbox .filterbox2 .rangebox .range::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #000000;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.App .cardbox {
+  width: 100%;
+  height: 80%;
+  flex: 4;
+  border-left: 1px solid rgba(128, 128, 128, 0.3137254902);
+}
+.App .cardbox .head {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+  font-family: impact;
+  width: 95%;
+  text-align: left;
+  height: 80px;
+  color: rgba(0, 0, 0, 0.8352941176);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3137254902);
+  padding-left: 15px;
+}
+.App .cardbox .none-box {
+  text-align: center;
+  margin: 50px 0;
+}
+.App .cardbox .card-flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  padding-top: 25px;
+}
+.App .cardbox .card {
+  margin: 12px 15px;
+  width: 11rem;
+  height: 15rem;
+  cursor: pointer;
+}
+.App .cardbox .card .imgbox {
+  height: 11rem;
+  border-radius: 20px;
+  background-color: #fd9468;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1176470588));
+  text-align: center;
+  padding-top: 30px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0px;
+}
+.App .cardbox .card .imgbox img {
+  width: 180px;
+  transform: rotate(-10deg);
+}
+.App .cardbox .card .imgbox .bagbox {
+  position: absolute;
+  top: -2px;
+  left: 7px;
+  color: #f4f4f4;
+  font-size: 35px;
+  cursor: pointer;
+  opacity: 0;
+}
+.App .cardbox .card .imgbox:hover .bagbox {
+  top: 10px;
+  opacity: 1;
+  transition: all ease 0.8s;
+}
+.App .cardbox .card .contentbox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 10px;
+  justify-content: space-around;
+}
+.App .cardbox .card .contentbox .box1 {
+  flex: 1;
+}
+.App .cardbox .card .contentbox .box1 .name {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: impact;
+  color: rgba(0, 0, 0, 0.937254902);
+}
+.App .cardbox .card .contentbox .box1 .star {
+  display: flex;
+  flex-direction: row;
+}
+.App .cardbox .card .contentbox .box1 .star div {
+  color: rgba(0, 0, 0, 0.937254902);
+  padding-top: 7px;
+  padding-right: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.App .cardbox .card .contentbox .box2 {
+  flex: 0.2;
+}
+.App .cardbox .card .contentbox .box2 .price {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: impact;
+  color: rgba(0, 0, 0, 0.937254902);
+}
+.App .cardbox .card .contentbox .box2 .color {
+  width: 20px;
+  margin-top: 5px;
+  height: 20px;
+  border-radius: 50px;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3058823529));
+}
+
+.mainfilter {
+  background-color: #0c0c0c;
+  padding: 10px;
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+.mainfilter .linkbox {
+  width: 100%;
+  height: 240px;
+}
+.mainfilter .linkbox .head {
+  font-family: impact;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  color: #e4e4e4;
+}
+.mainfilter .linkbox .ulbox {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+.mainfilter .linkbox .ulbox .link:hover {
+  transition: all ease 0.5s;
+  transform: scale(1.1);
+}
+.mainfilter .linkbox .ulbox .link {
+  font-family: impact;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #e4e4e4;
+  padding-top: 15px;
+  border-radius: 4px;
+  border: 1px solid #e4e4e4;
+  padding: 7px 5px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.mainfilter .linkbox .ulbox .link a {
+  color: #e4e4e4;
+  text-decoration: none;
+}
+.mainfilter .colorbox {
+  width: 100%;
+  height: 200px;
+}
+.mainfilter .colorbox .head {
+  font-family: impact;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  color: #e4e4e4;
+}
+.mainfilter .colorbox .colorcard {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+.mainfilter .colorbox .colorcard .color {
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  background-color: #fd9468;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1450980392));
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.mainfilter .colorbox .colorcard .color:hover {
+  transition: all ease 0.5s;
+  transform: scale(1.1);
+}
+.mainfilter .rangebox {
+  width: 100%;
+  height: auto;
+  font-family: impact;
+  color: #fafafa;
+}
+.mainfilter .rangebox .head {
+  font-family: impact;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  color: #e4e4e4;
+  padding-bottom: 30px;
+}
+.mainfilter .rangebox .range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #404040; /* Grey background */
+  outline: none; /* Remove outline */ /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+.mainfilter .rangebox .range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #000;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.mainfilter .rangebox .range::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #000000;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 2500px) {
+  body {
+    margin-top: 25px !important;
+  }
+  .menuhead,
+  .mainmenu {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+  .filterbox2 .linkbox,
+  .filterbox2 .colorbox {
+    height: 350px !important;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 900px) {
+  .App {
+    width: 100% !important;
+  }
+  .filterbox,
+  .menubox {
+    display: none !important;
+  }
+  .flexbox {
+    margin: 5px auto !important;
+    display: inline-block !important;
+  }
+  .cardbox {
+    border-left: 0px !important;
+  }
+  .cardbox .card-flex {
+    justify-content: center !important;
+    margin-top: 20px;
+  }
+  .cardbox .card-flex .card .imgbox img {
+    width: 220px;
+  }
+  .cardbox .head {
+    font-size: 28px !important;
+    height: 40px !important;
+  }
+  .cardbox .card {
+    width: 15rem !important;
+  }
+  .cardbox .card .bagbox {
+    opacity: 1 !important;
+    top: 10px !important;
+  }
+}/*# sourceMappingURL=Style.css.map */

@@ -1,0 +1,202 @@
+.bagbox2 {
+  margin: 30px auto;
+  width: 80%;
+  height: auto;
+}
+.bagbox2 .tabbox {
+  text-align: left;
+  width: 100%;
+  height: 30px;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2431372549);
+}
+.bagbox2 .tabbox .tab {
+  font-family: impact;
+  color: #e44059;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 100px;
+  border-top-left-radius: 20px;
+  border-bottom: 3px solid #e44059;
+}
+.bagbox2 .tabbox .tab span {
+  background-color: #e44059;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+.bagbox2 .flex {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+}
+.bagbox2 .flex .bagcard {
+  flex: 3;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.3137254902);
+  padding: 15px;
+}
+.bagbox2 .flex .bagcard .content {
+  text-align: left;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+.bagbox2 .flex .bagcard .content .text {
+  color: #000;
+  font-size: 15px;
+  font-family: impact;
+}
+.bagbox2 .flex .bagcard .content .number {
+  color: rgba(91, 89, 89, 0.9647058824);
+  font-size: 12px;
+  padding-top: 10px;
+  font-family: impact;
+}
+.bagbox2 .flex .bagcard .cardbox2 {
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: left;
+  flex-direction: row;
+}
+.bagbox2 .flex .bagcard .card {
+  margin-right: 25px;
+  margin-top: 18px;
+  width: 11rem;
+  height: auto;
+  cursor: pointer;
+}
+.bagbox2 .flex .bagcard .card .imgbox {
+  height: 11rem;
+  border-radius: 20px;
+  background-color: #fd9468;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1176470588));
+  text-align: center;
+  padding-top: 30px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0px;
+}
+.bagbox2 .flex .bagcard .card .imgbox img {
+  width: 180px;
+  transform: rotate(-10deg);
+}
+.bagbox2 .flex .bagcard .card .contentbox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 10px;
+  justify-content: space-around;
+}
+.bagbox2 .flex .bagcard .card .contentbox .box1 {
+  flex: 1;
+}
+.bagbox2 .flex .bagcard .card .contentbox .box1 .name {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: impact;
+  color: rgba(0, 0, 0, 0.937254902);
+}
+.bagbox2 .flex .bagcard .card .contentbox .box1 .star {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bagbox2 .flex .bagcard .card .contentbox .box1 .star div {
+  color: #e44059;
+  padding-top: 7px;
+  padding-right: 5px;
+  cursor: pointer;
+  font-size: 21px;
+  font-family: Impact;
+  padding-right: 10px;
+}
+.bagbox2 .flex .bagcard .card .contentbox .box2 {
+  flex: 0.2;
+}
+.bagbox2 .flex .bagcard .card .contentbox .box2 .price {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: impact;
+  color: rgba(0, 0, 0, 0.937254902);
+}
+.bagbox2 .flex .bagcard .card .contentbox .box2 .color {
+  width: 20px;
+  margin-top: 5px;
+  height: 20px;
+  border-radius: 50px;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.6274509804));
+}
+.bagbox2 .flex .infobox {
+  flex: 1;
+  margin: 0px 20px;
+}
+.bagbox2 .flex .infobox .pricebox {
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.3137254902);
+  padding: 0 25px;
+  width: 100%;
+}
+.bagbox2 .flex .infobox .pricebox .pricecom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #656565;
+  padding: 25px 0;
+  font-family: impact;
+}
+.bagbox2 .flex .infobox .pricebox .totalprice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.9647058824);
+  font-family: impact;
+}
+.bagbox2 .flex .infobox .pricebox .btnbox {
+  text-align: center;
+  padding-top: 40px;
+  width: 100%;
+  height: auto;
+}
+.bagbox2 .flex .infobox .pricebox .btnbox button:hover {
+  border-radius: 50px;
+  transition: all ease 1s;
+}
+.bagbox2 .flex .infobox .pricebox .btnbox button {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #e44059;
+  padding: 15px;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3098039216));
+  color: #fff;
+  font-family: impact;
+  border: 0;
+}
+
+@media screen and (min-width: 300px) and (max-width: 950px) {
+  .flex {
+    flex-direction: column !important;
+    justify-content: left !important;
+  }
+  .flex .cardbox2 {
+    flex-direction: column !important;
+  }
+  .flex .cardbox2 .card {
+    margin-top: 25px !important;
+  }
+  .flex .infobox {
+    margin-top: 25px !important;
+  }
+}/*# sourceMappingURL=Style.css.map */
